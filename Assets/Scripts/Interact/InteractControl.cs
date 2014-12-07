@@ -14,9 +14,10 @@ public class InteractControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		if(Input.anyKeyDown)
+		if(InputController.InputAnyKey())
 		{
 			DoAllActions();
+			Debug.Log("attempt interact");
 		}
 	}
 	
@@ -24,11 +25,13 @@ public class InteractControl : MonoBehaviour {
 		GameObject obj = coll.gameObject;
 		DoAction(obj);
 		_interactables.Add(obj);
+		Debug.Log("Registered Object: " + obj.name);
 	}
 	
 	void OnTriggerExit2D(Collider2D coll){
 		_interactables.Remove(coll.gameObject);
 		DoReset (coll.gameObject);
+		Debug.Log("Unregistered Object: " + coll.gameObject.name);
 	}
 	
 	private void DoAllActions(){
@@ -38,15 +41,16 @@ public class InteractControl : MonoBehaviour {
 	}
 	
 	private void DoAction(GameObject obj){
-		IInteract action = (IInteract)gameObject.GetComponent(typeof(IInteract));
+		IInteract action = obj.GetComponent(typeof(IInteract)) as IInteract;
 		
 		if(action != null){
+
 			action.action();
 		}
 	}
 	
 	private void DoReset(GameObject obj){
-		IInteract reset = (IInteract)gameObject.GetComponent(typeof(IInteract));
+		IInteract reset = obj.GetComponent(typeof(IInteract)) as IInteract;
 		
 		if(reset != null){
 			reset.reset();

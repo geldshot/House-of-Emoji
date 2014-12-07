@@ -14,7 +14,7 @@ public class Motor : MonoBehaviour {
 			_move = _move * _speed;
 		}
 	}
-	
+	[SerializeField]
 	private float _speed = 0f;
 	public float speed
 	{
@@ -39,7 +39,7 @@ public class Motor : MonoBehaviour {
 	void FixedUpdate(){
 		if(TieToInput){
 			this.direction = InputController.GetMovementVector();
-			this.speed = this.direction.magnitude;	
+			this.magSpeed = this.direction.magnitude;	
 		}
 		rigidbody2D.velocity = _move;
 	}
