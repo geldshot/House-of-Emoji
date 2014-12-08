@@ -41,18 +41,36 @@ public class DialogueDescription : MonoBehaviour, IInteract {
 		
 		if(InputController.GetButton(buttonInteract)){
 			//display dialogue
-		if(nextDialogue.MoveNext()){
+		if(nextDialogue.MoveNext() && (!isLastDialogue(nextDialogue.Current) || !checkItem())){//check will be true if item is not gotten)
 			box.gameObject.SetActive(true);
 			box.text = nextDialogue.Current;
 		}else{
-			if(ItemName != "" && ItemName != null){
-				GameObject obj = GameObject.FindGameObjectWithTag("inventory");
-				GlobalInventory inv = obj.GetComponent<GlobalInventory>();
-				inv.activateItem(ItemName);
-			}
+			addItem();
 			reset ();
 		}
 			
+		}
+	}
+	
+	public bool isLastDialogue(string cur){
+		if(ItemName != "" && ItemName != null){
+			return textDialogue[textDialogue.Count - 1] == cur;
+		}else{
+			return false;
+		}
+	}
+	
+	public bool checkItem(){
+		GameObject obj = GameObject.FindGameObjectWithTag("inventory");
+		GlobalInventory inv = obj.GetComponent<GlobalInventory>();
+		return inv.haveItem(ItemName);
+	}
+	
+	public void addItem(){
+		if(ItemName != "" && ItemName != null){
+			GameObject obj = GameObject.FindGameObjectWithTag("inventory");
+			GlobalInventory inv = obj.GetComponent<GlobalInventory>();
+			inv.activateItem(ItemName);
 		}
 	}
 	
