@@ -14,8 +14,6 @@ public class DialogueDescription : MonoBehaviour, IInteract {
 	// Use this for initialization
 	void Start () {
 		nextDialogue = textDialogue.GetEnumerator();
-		nextDialogue.MoveNext();
-		
 	}
 	
 	void Reset(){
