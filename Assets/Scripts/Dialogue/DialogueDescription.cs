@@ -10,7 +10,7 @@ public class DialogueDescription : MonoBehaviour, IInteract {
 	private List<string>.Enumerator nextDialogue;
 	[SerializeField]
 	private Text box;
-	
+	public string ItemName = "";
 	// Use this for initialization
 	void Start () {
 		nextDialogue = textDialogue.GetEnumerator();
@@ -45,6 +45,11 @@ public class DialogueDescription : MonoBehaviour, IInteract {
 			box.gameObject.SetActive(true);
 			box.text = nextDialogue.Current;
 		}else{
+			if(ItemName != "" && ItemName != null){
+				GameObject obj = GameObject.FindGameObjectWithTag("inventory");
+				GlobalInventory inv = obj.GetComponent<GlobalInventory>();
+				inv.activateItem(ItemName);
+			}
 			reset ();
 		}
 			
