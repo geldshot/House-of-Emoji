@@ -263,6 +263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a689a41db0ab0345a545c8d1392417a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inactiveAlpha: .200000003
 --- !u!95 &247495245
 Animator:
   serializedVersion: 3
@@ -380,6 +381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a689a41db0ab0345a545c8d1392417a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inactiveAlpha: .200000003
 --- !u!95 &304661398
 Animator:
   serializedVersion: 3
@@ -558,6 +560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a689a41db0ab0345a545c8d1392417a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inactiveAlpha: .200000003
 --- !u!95 &428034397
 Animator:
   serializedVersion: 3
@@ -1603,6 +1606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a689a41db0ab0345a545c8d1392417a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inactiveAlpha: .200000003
 --- !u!95 &1735035687
 Animator:
   serializedVersion: 3
@@ -1708,6 +1712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a689a41db0ab0345a545c8d1392417a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inactiveAlpha: 75
 --- !u!95 &1758900409
 Animator:
   serializedVersion: 3
@@ -1820,6 +1825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a689a41db0ab0345a545c8d1392417a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inactiveAlpha: .200000003
 --- !u!95 &1774167351
 Animator:
   serializedVersion: 3
@@ -1938,6 +1944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a689a41db0ab0345a545c8d1392417a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inactiveAlpha: .200000003
 --- !u!95 &1979709318
 Animator:
   serializedVersion: 3
@@ -2309,6 +2316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a689a41db0ab0345a545c8d1392417a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inactiveAlpha: .200000003
 --- !u!1 &2059294243
 GameObject:
   m_ObjectHideFlags: 0
@@ -2470,6 +2478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a689a41db0ab0345a545c8d1392417a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inactiveAlpha: .200000003
 --- !u!95 &2112268610
 Animator:
   serializedVersion: 3
