@@ -29,7 +29,9 @@ public class InteractControl : MonoBehaviour {
 	}
 	
 	void OnTriggerExit2D(Collider2D coll){
-		_interactables.Remove(coll.gameObject);
+		while(_interactables.Contains(coll.gameObject)){
+			_interactables.Remove(coll.gameObject);
+		}
 		DoReset (coll.gameObject);
 		Debug.Log("Unregistered Object: " + coll.gameObject.name);
 	}
