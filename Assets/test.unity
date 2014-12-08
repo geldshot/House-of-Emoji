@@ -140,6 +140,56 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1424960}
+--- !u!1 &55924286
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 55924288}
+  - 212: {fileID: 55924287}
+  m_Layer: 0
+  m_Name: Flashlight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &55924287
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 55924286}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: a2bd7862efd6e5541be855697265652d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!4 &55924288
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 55924286}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 662959854}
+  m_RootOrder: 0
 --- !u!1 &117078939
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,6 +565,7 @@ MonoBehaviour:
   textDialogue:
   - It's so cold in here...
   box: {fileID: 468674587}
+  ItemName: 
 --- !u!223 &247495248
 Canvas:
   m_ObjectHideFlags: 0
@@ -693,6 +744,7 @@ MonoBehaviour:
   - This old smelly couch endured many years of wear and tear
   - Nothing interesting under the cushions, or in the torn hole
   box: {fileID: 203817299}
+  ItemName: 
 --- !u!223 &346558292
 Canvas:
   m_ObjectHideFlags: 0
@@ -1119,6 +1171,7 @@ MonoBehaviour:
   - Nothing under the sheets. It would be uncomfortable sleeping with random objects
     under the sheets anyway.
   box: {fileID: 964458020}
+  ItemName: 
 --- !u!223 &556173865
 Canvas:
   m_ObjectHideFlags: 0
@@ -1274,6 +1327,46 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 34, y: 20}
   m_Center: {x: -3, y: 1}
+--- !u!1 &662959853
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 662959854}
+  - 114: {fileID: 662959855}
+  m_Layer: 0
+  m_Name: Inventory
+  m_TagString: inventory
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &662959854
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 662959853}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -281.799988, y: 126.900002, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 55924288}
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+--- !u!114 &662959855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 662959853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5099969b3dbe24e44881c3dd436bcbb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &684019972
 GameObject:
   m_ObjectHideFlags: 0
@@ -1328,6 +1421,7 @@ MonoBehaviour:
   - Unidentified stains soak this old table
   - Nothing under the table
   box: {fileID: 117078941}
+  ItemName: 
 --- !u!223 &684019975
 Canvas:
   m_ObjectHideFlags: 0
@@ -1446,6 +1540,7 @@ MonoBehaviour:
   - The window barely holds together. Cracked, but still protects from the elements.
   - 
   box: {fileID: 1610030048}
+  ItemName: 
 --- !u!223 &739452275
 Canvas:
   m_ObjectHideFlags: 0
@@ -1807,6 +1902,7 @@ MonoBehaviour:
   - A couple of T-shirts lie on the floor of the closet
   - Nothing of interest...
   box: {fileID: 1183247323}
+  ItemName: 
 --- !u!223 &938749327
 Canvas:
   m_ObjectHideFlags: 0
@@ -1888,6 +1984,7 @@ MonoBehaviour:
   - Nothing can be seen except the vaguest shadows of trees against the night sky
   - Dead spiders and bugs hang from the cobwebs on top of this window.
   box: {fileID: 1584962474}
+  ItemName: 
 --- !u!223 &953555011
 Canvas:
   m_ObjectHideFlags: 0
@@ -2034,6 +2131,7 @@ MonoBehaviour:
   textDialogue:
   - A symbol hangs on this wall. Parents said it was for good luck
   box: {fileID: 1848386685}
+  ItemName: 
 --- !u!223 &984246011
 Canvas:
   m_ObjectHideFlags: 0
@@ -2137,6 +2235,7 @@ MonoBehaviour:
   textDialogue:
   - Old LCD TV doesn't work without power
   box: {fileID: 559238839}
+  ItemName: 
 --- !u!223 &1175181894
 Canvas:
   m_ObjectHideFlags: 0
@@ -2335,6 +2434,7 @@ MonoBehaviour:
   - No response.
   - Click. Click.
   box: {fileID: 880365787}
+  ItemName: Flashlight
 --- !u!223 &1400787749
 Canvas:
   m_ObjectHideFlags: 0
@@ -3251,6 +3351,7 @@ MonoBehaviour:
   textDialogue:
   - Power is out
   box: {fileID: 915066493}
+  ItemName: 
 --- !u!223 &1979709321
 Canvas:
   m_ObjectHideFlags: 0
@@ -3487,6 +3588,7 @@ MonoBehaviour:
     on a small plate
   - A small pot of ashes and some red sticks stand in its pile
   box: {fileID: 187061988}
+  ItemName: 
 --- !u!223 &2035705507
 Canvas:
   m_ObjectHideFlags: 0
@@ -3665,6 +3767,7 @@ MonoBehaviour:
   textDialogue:
   - A thick layer of lint and dust collects in this vent over the years
   box: {fileID: 362746282}
+  ItemName: 
 --- !u!223 &2059294246
 Canvas:
   m_ObjectHideFlags: 0
@@ -3728,6 +3831,7 @@ MonoBehaviour:
   - This chair used to help you scale hights not possible for a 2-year-old
   - Nothing behind this chair.
   box: {fileID: 1424961}
+  ItemName: 
 --- !u!223 &2067335573
 Canvas:
   m_ObjectHideFlags: 0
